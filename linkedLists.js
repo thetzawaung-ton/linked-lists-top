@@ -78,38 +78,38 @@ export default class LinkedList {
   }
   contains(value) {
     let targetNode = this.headNode;
-    while(targetNode !== null) {
-        if(targetNode.value === value) {
-            return true
-        } else {
-            targetNode = targetNode.nextNode;
-        }
+    while (targetNode !== null) {
+      if (targetNode.value === value) {
+        return true;
+      } else {
+        targetNode = targetNode.nextNode;
+      }
     }
-    return false    
+    return false;
   }
   findIndex(value) {
     let targetNode = this.headNode;
     let index = 0;
-    while(targetNode !== null) {
-        if(targetNode.value === value) {
-            return index;
-        } else {
-            targetNode = targetNode.nextNode;
-            index++;
-        }
+    while (targetNode !== null) {
+      if (targetNode.value === value) {
+        return index;
+      } else {
+        targetNode = targetNode.nextNode;
+        index++;
+      }
     }
     return -1;
   }
   toString() {
     let string = "";
     let targetNode = this.headNode;
-    while(targetNode !== null) {
-        if(targetNode.nextNode === null) {
-            string = string + ` ( ${targetNode.value} ) -> null`;
-        } else {
+    while (targetNode !== null) {
+      if (targetNode.nextNode === null) {
+        string = string + ` ( ${targetNode.value} ) -> null`;
+      } else {
         string = string + ` ( ${targetNode.value} ) ->`;
-        }
-        targetNode = targetNode.nextNode;
+      }
+      targetNode = targetNode.nextNode;
     }
     return string;
   }
